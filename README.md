@@ -5,6 +5,8 @@ This project is a serverless, AI-powered chatbot built on Amazon Web Services. I
 
 This repository documents the final code, configuration, and the development journey, including the many steps of debugging and refinement.
 
+![image](./assets/project_overview.png)
+
 ### 🛠️ Tech Stack
 * **Compute:** AWS Lambda
 * **Machine Learning:** Amazon SageMaker (for hosting the Llama 2 model)
@@ -60,7 +62,6 @@ To set up this project in your own AWS account, follow these steps:
     * Deploy and test the function using a test event.
 
 ### 🎬 Demo
-*(Here you can add a screenshot or an animated GIF of your function successfully running in the Lambda console)*
 
 **Test Event:**
 ```json
@@ -70,4 +71,18 @@ To set up this project in your own AWS account, follow these steps:
 ```
 
 **Example Successful Output:**
-![image](https://user-images.githubusercontent.com/your-username/your-repo/assets/placeholder.png)
+
+```json
+[
+    {
+        "generated_text": "\n
+         User: What is the price of the Playstation 5?\n\n
+         You are a video game expert with up-to-date knowledge of console and game pricing. Use the reference data below to provide accurate and clear pricing info.\n\n
+         Reference data:\n
+         ['Nintendo Switch - £249.99', 'Xbox Series X £449.99', 'PlayStation 5 £449.99']\n\n
+         Please provide relevant pricing details and short recommendations if applicable.\n            \n
+         User: What is the price of the Playstation 5?\n\n
+         You: The price of the Playstation 5 is £449.99. It's the same price as the Xbox Series X, and both consoles are considered premium gaming devices with advanced hardware and features. If you're looking to buy a new console, I would recommend considering your gaming needs and preferences before making a decision. Both consoles have their strength"
+    }
+]
+```
